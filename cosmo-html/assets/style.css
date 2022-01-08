@@ -1,0 +1,407 @@
+/***
+  |----------------------------------------------------------------------------
+  | PROJECT NAME: Cosmo HTML Template
+  | Author: Amrit Gandhi
+  | CSS: Custom Style
+  | Bootstrap Version: 5.1.3
+  |----------------------------------------------------------------------------  
+  
+***/
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Bellefair&display=swap');
+
+/* ==================================================================
+General Styles
+================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #0B0d17;
+  --white: #FFFFFF;
+  --light-grey: #D0D6F9;
+  --pale-white: rgba(255,255,255,0.3);
+}
+
+body {
+  overflow: auto;
+  line-height: 1.5;
+  background-color: var(--black);
+  background-image: url(../assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  color: var(--white);
+  min-height: 100vh;
+  counter-reset: section;
+  font-family: 'Barlow', sans-serif;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.navbar {
+  padding: 2rem 0;
+}
+
+.navbar-light .navbar-brand {
+  color: var(--white);
+  padding-left: 45px;
+  padding-top: 15px;
+}
+
+a.navbar-brand::after {
+  content: '';
+  width: 32%;
+  background: var(--white);
+  height: 1px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.navbar-nav {
+  background: rgba(255,255,255,0.2);
+  width: 65%;
+  min-height: 68px;
+  align-items: center;
+  margin: 0;
+  padding-left: 50px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 20px 15px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  border-bottom: 3px solid var(--white);
+  color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link span {
+  font-weight: bold;
+  padding-right: 4px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--white);
+  border-bottom: 3px solid var(--white);
+}
+
+/* ==================================================================
+Home Page
+================================================================== */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: calc(100vh - 132px);
+  padding-bottom: 100px;
+}
+
+.home-info {
+  width: 400px;
+}
+
+.home-info h2, 
+.tab-pane h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: 'Bellefair', serif;
+  margin-top: 2rem;
+}
+
+.home-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.page-title {
+  text-transform: uppercase;
+  letter-spacing: 2.35px;
+  font-size: 16px;
+}
+
+a.home-explore {
+  background: var(--white);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-family: 'Bellefair', serif;
+  text-decoration: none;
+}
+
+a.home-explore:hover {
+  color: var(--black);
+}
+
+/* ==================================================================
+Destination Page
+================================================================== */
+.title {
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 2.35px;
+}
+
+.destination-title span {
+  color: var(--pale-white);
+  font-weight: bold;
+}
+
+
+.destination-meta {
+  display: flex;    
+  border-top: 1px solid #fff;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+.destination-meta .item {
+  width: 200px;
+}
+
+.destination-meta .item h4 {
+  font-size: 14px;
+  letter-spacing: 2.35px;
+  text-transform: uppercase;
+}
+
+.destination-meta .item p {
+  font-family: 'Bellefair', serif;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+/* ==================================================================
+Technology Page
+================================================================== */
+#technology .tab-content .tab-pane h2 {
+  margin-top: 1rem;
+}
+
+/* ==================================================================
+Tab Sytles
+================================================================== */
+.tabs .tab-header {
+  color: var(--white);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.tabs .tab-header .tab {
+  width: calc(100% / 3);
+  border: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+  text-transform: uppercase;
+  font-family: 'Bellefair', serif;
+  font-size: 16px;
+  letter-spacing: 2.35px;
+}
+
+.tabs .tab-header .tab.active {
+  border-bottom: 1px solid var(--white);
+}
+
+.tabs .tab-content .tab-pane {
+  display: none;
+}
+
+.tabs .tab-content .tab-pane.active {
+  display: block;
+}
+
+/* ==================================================================
+Vertical Tab Sytles
+================================================================== */
+.vertical-tabs {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.vertical-tabs .tab-header {
+  color: var(--white);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 15%;
+}
+
+.vertical-tabs .tab-header .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--pale-white);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.vertical-tabs .tab-header .tab:hover {
+  border: 1px solid var(--white);
+}
+
+.vertical-tabs .tab-header .tab.active {
+  border-bottom: 1px solid var(--white);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.vertical-tabs .tab-content {
+  display: flex;
+  flex-basis: 85%;
+}
+
+.vertical-tabs .tab-content .tab-pane {
+  display: none;
+}
+
+.vertical-tabs .tab-content .tab-pane.active {
+  display: block;
+}
+
+/* ==================================================================
+Media Queries
+================================================================== */
+@media (max-width: 575.98px) {
+  body {
+    background-image: url(../assets/home/background-home-mobile.jpg) !important;
+  }
+
+  .navbar-expand-sm .navbar-toggler {
+    width: 10% !important
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-expand-sm .navbar-toggler {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+  
+  .navbar-expand-sm .navbar-collapse {
+    display: block !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    width: 75%;
+  }
+
+  .tabs .tab-content .tab-pane {
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .destination-meta {
+    justify-content: center;
+  }
+
+  .img-custom {
+    display: flex;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  body {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  a.navbar-brand::after {
+    display: none;
+  }
+
+  .navbar-light .navbar-nav .nav-link span {
+    display: none;
+  }
+
+  .home {
+    display: block !important;
+    padding-top: 60px;
+    padding-bottom: 100px !important;
+  }
+
+  .home-info {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home-title p {
+    margin-bottom: 3rem;
+  }
+
+  a.home-explore {
+    margin: 100px auto;
+  }
+}
+
+/* ==================================================================
+Custom Scrollbar
+================================================================== */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-grey);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dark-grey);
+}
