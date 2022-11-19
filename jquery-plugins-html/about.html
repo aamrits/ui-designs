@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>About | jQuery Plugins Demo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/contact.css" rel="stylesheet">
+
+    <!-- Google Fonts -->    
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Kaushan+Script|PT+Sans:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">jQuery Plugins</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                </ul>
+                <ul class="navbar-nav">                
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="glossary.html">Glossary</a>
+                    </li>                               
+                </ul>                       
+            </div>
+        </div><!-- #.container -->
+    </nav><!-- #nav -->
+    
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="section-content">
+                    <h2 class="title-heading">About</h2>
+                    <div class="border-line"></div>
+                    <div class="desc">                            
+                        <p>Find all jQuery Plugins in one place.</p>
+                    </div><!-- /.desc -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-sm-12 -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <footer>
+        <p class="site-name">jQuery Plugins</p>
+        <p><span id="date"></span>. All rights reserved</p>
+    </footer>
+
+    <script>
+        const date = new Date();
+        const getYear = date.getFullYear();
+        document.querySelector('#date').innerHTML = getYear;
+    </script>
+
+    <!-- Slim jquery -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Fontawesome CSS -->
+    <script src="js/fontawesome-all.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

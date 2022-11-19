@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>jQuery Plugins Demo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Highlight CSS -->
+    
+    <link href="css/tomorrow-night-eighties.css" rel="stylesheet" />
+
+    <!-- owl Carousel CSS -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/owl.theme.default.min.css" rel="stylesheet" />
+
+    <!-- Animate CSS -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Bxslider CSS -->
+    <link href="css/jquery.bxslider.min.css" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link href="css/swiper.min.css" rel="stylesheet" />
+
+    <!-- Roundslider CSS -->
+    <link href="css/roundslider.min.css" rel="stylesheet" />
+
+    <!-- Twentytwenty CSS -->
+    <link href="css/twentytwenty.css" rel="stylesheet" />
+
+    <!-- Magnific popup CSS -->
+    <link href="css/magnific-popup.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Prism CSS -->
+    <link href="css/prism.css" rel="stylesheet">
+
+    <!-- Google Fonts -->    
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Kaushan+Script|PT+Sans:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i,900,900i|Roboto+Mono:300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="headroom headroom--pinned" id="header">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">jQuery Plugins</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sliders
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a data-scroll class="dropdown-item" href="#owlCarousel-js">Owl Carousel 2</a>
+                                <a data-scroll class="dropdown-item" href="#owlCarousel-vertical-js">Owl Carousel 2 (Vertical)</a>
+                                <a data-scroll class="dropdown-item" href="#bx-slider-js">Bx Slider</a></a>
+                                <a data-scroll class="dropdown-item" href="#swiper-slider-js">Swiper</a>
+                                <a data-scroll class="dropdown-item" href="#round-slider-js">Round Slider</a>
+                            </div>
+                        </li>  
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a data-scroll class="dropdown-item" href="#mixitup-js">MixItUp</a> 
+                                <a data-scroll class="dropdown-item" href="#filterizr-js">Filterizr</a>
+                            </div>
+                        </li> 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Misc
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a data-scroll class="dropdown-item" href="#twentytwenty-js">Twentytwenty (Visual Diff Tool)</a>
+                                <div class="dropdown-divider"></div>
+                                <a data-scroll class="dropdown-item" href="#typed-js">Typed.js (Auto Typing)</a>
+                                <div class="dropdown-divider"></div>
+                                <a data-scroll class="dropdown-item" href="#magnific-popup-js">Magnific Popup (Lightbox)</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">                
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="glossary.html">Glossary</a>
+                        </li>                          
+                    </ul>            
+                </div>
+            </div><!-- #.container -->
+        </nav><!-- #nav -->
+    </header>
+
+    <!-- #wrapper -->
+    <div id="wrapper">
+        <div class="bg-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center text-white">
+                        <h1 class="mt-3">jQuery Plugins Demo</h1>
+                        <h4 class="mt-2">Find all jQuery Plugins in one place. <span id="plugins" style="white-space:pre;"></span></h4>
+                        <a href="#" class="btn btn-light mt-2">Download Now</a>
+                        <p>(Download the manual and know how to install all jquery plugins in one place.)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- #.wrapper -->
+
+    <div id="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="page-wrapper">
+                    
+                    <!-- Owl Carousel -->
+                    <div id="owlCarousel-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">Owl Carousel</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>Owl Carousel 2 is a touch enabled jQuery plugin that lets you create a beautiful responsive carousel slider. It is fully customisable, supported in modern browsers and is responsive. Touch and drag support is also there. Below is the demo of this beautiful plugin.</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="demo-section">
+                                        <div class="basic-carousel owl-carousel owl-theme">
+                                            <div class="item">
+                                                <img src="img/img-1.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-2.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-3.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-4.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-5.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-6.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-7.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-8.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                        </div>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/c103c58c7a286b4de8db7cadbdc26c75.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank">Download Owl Carousel 2</a></li>
+                                        <li><a href="https://owlcarousel2.github.io/OwlCarousel2/docs/started-installation.html" target="_blank">Check how to install</a></li>
+                                        <li><a href="https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html" target="_blank">Owl Carousel options</a></li>
+                                        <li><a href="https://owlcarousel2.github.io/OwlCarousel2/demos/demos.html" target="_blank">Check the demos</a></li>
+                                    </ol>
+                                </div><!-- /.demo-section -->
+                            </div><!-- /.desc -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #owlCarousel-js -->
+
+                    <!-- Owl Carousel Vertical slider -->
+                    <div id="owlCarousel-vertical-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">Owl Carousel (Vertical)</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>For implementing a vertical carousel, we need <cd-hl>animate.css</cd-hl> to be integrated with Owl Carousel 2. First, let us see the demo about how it looks.</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="offset-sm-3 col-sm-6 demo-section">
+                                        <div class="vertical-carousel owl-carousel owl-theme">
+                                            <div class="item">
+                                                <img src="img/img-1.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-2.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-3.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-4.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/img-5.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                        </div>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/b04a4f48f4bdee05be3192ad025533a4.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://daneden.github.io/animate.css" target="_blank">Download animate.css</a></li>
+                                    </ol>
+                                </div><!-- /.demo-section -->
+                            </div><!-- /.desc -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #owlCarousel-vertical-js -->
+
+                    <!-- Bx slider -->
+                    <div id="bx-slider-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">bxSlider</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>A responsive jQuery content slider.</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="demo-section">
+                                        <div class="slider">
+                                            <div>
+                                                <img src="img/img-1.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div>
+                                                <img src="img/img-2.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div>
+                                                <img src="img/img-3.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div>
+                                                <img src="img/img-4.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                            <div>
+                                                <img src="img/img-5.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                        </div>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/4e2b14720a516b31c6d70e4d2d8cbf89.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://bxslider.com/" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.demo-section -->
+                            </div><!-- /.desc -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #bx-slider-js -->
+
+                    <!-- Swiper slider -->
+                    <div id="swiper-slider-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">Swiper</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>The most modern mobile touch slider.</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="offset-sm-3 col-sm-6 demo-section">
+                                        <!-- Slider main container -->
+                                        <div class="swiper-container">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <img src="img/img-2.jpg" class="img-fluid" alt="Image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="img/img-5.jpg" class="img-fluid" alt="Image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="img/img-6.jpg" class="img-fluid" alt="Image">
+                                                </div>
+                                            </div>
+                                            <!-- If we need pagination -->
+                                            <div class="swiper-pagination"></div>
+                                            
+                                            <!-- If we need navigation buttons -->
+                                            <!-- <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div> -->
+                                            
+                                            <!-- If we need scrollbar -->
+                                            <!-- <div class="swiper-scrollbar"></div> -->
+                                        </div>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/3ca93cbba9b2c8eb8fc56df1d2817755.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://swiperjs.com/" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.demo-section -->
+                            </div><!-- /.desc -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #swiper-slider-js -->
+
+                    <!-- Round slider -->
+                    <div id="round-slider-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">roundSlider</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>Round slider (also can call as Circular slider, Radial slider) is a jQuery plugin that allows the user to select a value or range of values.</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="demo-section">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h3>Slider Types</h3>
+                                                <div class="container">
+                                                    <div class="control">
+                                                        <div id="type"></div>
+                                                    </div>
+                                                    <div class="options">
+                                                        <select id="Select1" onchange="sliderTypeChanged(this)" style="float: left;">
+                                                            <option>default</option>
+                                                            <option>min-range</option>
+                                                            <option>range</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="col-sm-6">
+                                                <h3>Circle Shapes</h3>
+                                                <div class="container">
+                                                    <div class="control">
+                                                        <div id="shape"></div>
+                                                    </div>
+                                                    <div class="options">
+                                                        <select id="type1" onchange="sliderShapeChanged(this)" style="float: left;">
+                                                            <option>full</option>
+                                                            <option>quarter-top-left</option>
+                                                            <option>quarter-top-right</option>
+                                                            <option>quarter-bottom-right</option>
+                                                            <option>quarter-bottom-left</option>
+                                                            <option>half-top</option>
+                                                            <option>half-bottom</option>
+                                                            <option>half-left</option>
+                                                            <option>half-right</option>
+                                                            <option>pie</option>
+                                                            <option>custom-half</option>
+                                                            <option>custom-quarter</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/4fb0c54c1f8ed46bcc8678f63c5935f6.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://roundsliderui.com/" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.demo-section -->
+                            </div><!-- /.desc -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #round-slider-js -->                    
+
+                    <!-- MixItUp -->
+                    <div id="mixitup-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">MixItUp (Filter)</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>A high-performance, dependency-free library for animated filtering, sorting, insertion, removal and more...</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="demo-section">
+                                        <p>Due to conflict in css files, I have created a separate page. Check <a href="pages/mix-it-up.html">here</a>.</p>
+                                        <p>NOTE: To be particular, Roundslider and MixItUp uses similar CSS class.</p>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/bead29369a2a0f8421b417a9062970c0.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://www.kunkalabs.com/mixitup/" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.desc -->
+                            </div><!-- /.section-content -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #mixitup-js -->
+
+                    <!-- Filterizr -->
+                    <div id="filterizr-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">Filterizr (Filter)</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>Filterizr is a JavaScript library that searches, sorts, shuffles and applies stunning filters over responsive galleries using CSS3 transitions.</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="demo-section">
+                                        <p>Due to conflict in css files, I have created a separate page. Check <a href="pages/filterizr.html">here</a>.</p>
+                                        <p>NOTE: To be particular, some scripts of MixItUp and Filterizr overlapped.</p>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/97bef1c615f918249bf5ba2b7c0a5e05.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://yiotis.net/filterizr/#/" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.desc -->
+                            </div><!-- /.section-content -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #filterizr-js -->
+
+                    <!-- Twentytwenty.js -->
+                    <div id="twentytwenty-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">TwentyTwenty</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p> TwentyTwenty, is a visual diff tool, makes it easy to spot and highlight the differences between two images!</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="col-10 offset-sm-3 col-sm-6 demo-section" id="twentytwenty">
+                                        <img src="img/img-1.jpg" class="img-fluid" alt="Image">
+                                        <img src="img/img-2.jpg" class="img-fluid" alt="Image">
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/1f028c09181c85aa9f538cf09846d2b0.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://zurb.com/playground/twentytwenty" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.desc -->
+                            </div><!-- /.section-content -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #twentytwenty-js -->
+
+                    <!-- Typed.js -->
+                    <div id="typed-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">Typed.js</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>Typed.js is a library that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="demo-section">
+                                        <span id="typed" style="white-space:pre;"></span>
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/783e8de015c2d9cf6e9305633ee34fdb.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://mattboldt.com/demos/typed-js/" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.desc -->
+                            </div><!-- /.section-content -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #typed-js -->
+
+                    <!-- Magnific Popup -->
+                    <div id="magnific-popup-js">
+                        <div class="col-sm-12">
+                            <div class="section-content">
+                                <h2 class="title-heading">Magnific Popup</h2>
+                                <div class="border-line"></div>
+                                <div class="desc">
+                                    <h3 class="sub-heading">Description:</h3>
+                                    <div class="short-desc">
+                                        <p>Magnific Popup is a responsive lightbox & dialog script with focus on performance and providing best experience for user with any device (for jQuery or Zepto.js).</p>
+                                    </div><!-- /.short-desc -->
+                                    <h3 class="sub-heading">Demo:</h3>
+                                    <div class="demo-section">
+                                        <div class="parent-gallery">
+                                            <a href="img/img-1.jpg">
+                                                <img src="img/img-1.jpg" class="img-fluid" alt="Image">
+                                            </a>
+                                            <a href="img/img-2.jpg">
+                                                <img src="img/img-2.jpg" class="img-fluid" alt="Image">
+                                            </a>
+                                            <a href="https://vimeo.com/channels/staffpicks/255479836" class="mfp-iframe">
+                                                <img src="img/img-3.jpg" class="img-fluid" alt="Image"> 
+                                                <!-- Open vimeo video Class mfp-iframe forces "iframe" content type on this item. -->
+                                            </a>
+                                            <a href="https://www.youtube.com/watch?v=rhpGzPierAY" class="mfp-iframe">
+                                                <img src="img/img-3.jpg" class="img-fluid" alt="Image"> 
+                                            </a>
+                                        </div>  
+                                    </div><!-- /.demo-section -->
+                                    <h3 class="sub-heading">Set up:</h3>
+                                    <div class="set-up">
+                                        <script src="https://gist.github.com/aamrits/b2a92fe01a57935dbfbd3d769432c1cc.js"></script>
+                                    </div><!-- /.set-up -->
+                                    <h3 class="sub-heading">Reference:</h3>
+                                    <ol class="ref">
+                                        <li><a href="https://dimsemenov.com/plugins/magnific-popup/" target="_blank">Homepage</a></li>
+                                    </ol>
+                                </div><!-- /.desc -->
+                            </div><!-- /.section-content -->
+                        </div><!-- /.col-sm-12 -->
+                    </div><!-- #magnific-popup-js -->
+
+                </div><!-- #page-wrapper -->
+            </div><!-- #.row -->
+        </div><!-- #.container -->
+    </div><!-- #main-wrapper -->
+
+    <footer>
+        <p class="site-name">jQuery Plugins</p>
+        <p><span id="date"></span>. All rights reserved</p>
+    </footer>
+
+
+    <!-- Slim jquery -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Fontawesome CSS -->
+    <script src="js/fontawesome-all.js"></script>
+
+    <!-- Highlighter.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="js/prettyPre.js"></script>
+
+    <!-- clipboard.js -->
+    <script src="js/clipboard.min.js"></script>
+
+    <!-- owlCarousel.js -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- bxslider.js -->
+    <script src="js/jquery.bxslider.min.js"></script>
+
+    <!-- swiper.js -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- roundslider.js -->
+    <script src="js/roundslider.min.js"></script>
+
+    <!-- Smoothscroll.js -->
+    <script src="js/smooth-scroll.min.js"></script>
+
+    <!-- Twentytwenty js -->
+    <script src="js/jquery.event.move.js"></script> 
+    <script src="js/jquery.twentytwenty.js"></script> 
+
+    <!-- Typed.js -->
+    <script src="js/typed.min.js"></script>
+
+    <!-- Magnific popup js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        function sliderTypeChanged(e) {
+            $("#type").roundSlider({ sliderType: e.value });
+        }
+        function sliderShapeChanged(e) {
+            var options = { circleShape: e.value };
+            if (e.value == "pie") options["startAngle"] = 0;
+            else if (e.value == "custom-quarter" || e.value == "custom-half") options["startAngle"] = 45;
+            $("#shape").roundSlider(options);
+        }      
+    </script>
+
+    <!-- Prism.js -->
+    <script src="js/prism.js"></script>
+</body>
+
+</html>
+
